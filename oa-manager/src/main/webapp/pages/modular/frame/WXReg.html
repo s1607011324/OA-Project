@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请绑定账户</title>
+</head>
+<script type="text/javascript">
+    var Feng = {
+        ctxPath: "",
+        addCtx: function (ctx) {
+            if (this.ctxPath === "") {
+                this.ctxPath = ctx;
+            }
+        }
+    };
+    Feng.addCtx("${ctxPath}");
+</script>
+<body>
+    <form action="${ctxPath}/weixin/bind" method="post">
+        请输入您的账户：<input type="text" name="account" value=""/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

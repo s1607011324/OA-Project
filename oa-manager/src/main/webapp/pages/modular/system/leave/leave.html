@@ -1,0 +1,47 @@
+@layout("/common/_container.html",{js:["/assets/modular/system/leave/leave.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">未申请</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input type="hidden" id="status" value="0">
+                                <input class="layui-input" id="startDate" placeholder="开始时间" type="text"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input class="layui-input" id="endDate" placeholder="结束时间" type="text"/>
+                            </div>
+
+                            <div class="layui-inline">
+                                <button class="layui-btn icon-btn" id="btnSearch"><i class="layui-icon">&#xe615;</i>查询
+                                </button>
+                                <button class="layui-btn icon-btn" id="btnAdd"><i class="layui-icon">&#xe654;</i>申请
+                                </button>
+                                <!--<button class="layui-btn icon-btn" id="btnExp"><i class="layui-icon">&#xe67d;</i>导出
+                            </button>-->
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="leaveTable" lay-filter="leaveTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="toolbarDemo" type="text/html">
+    请假信息
+</script>
+
+<script id="tableBar" type="text/html">
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="leaveApproval">申报</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+@}

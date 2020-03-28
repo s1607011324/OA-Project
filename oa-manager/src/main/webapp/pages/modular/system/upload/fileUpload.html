@@ -1,0 +1,25 @@
+@layout("/common/_container.html",{bg:"bg-white",js:["/assets/modular/system/upload/fileUpload.js"]}){
+<div class="layui-upload">
+    <div class="layui-upload-list">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>文件名</th>
+                <th>大小</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="demoList"></tbody>
+        </table>
+    </div>
+    <div class="layui-upload-drag testList" id="test10" style="width: 630px;height: auto;">
+        <i class="layui-icon"></i>
+        <p>将文件拖拽到此处</p>
+    </div>
+    <div class="layui-upload">
+        <button class="layui-btn layui-btn-normal testList" id="testList" type="button">选择文件</button>
+        <button class="layui-btn" id="testListAction" type="button">开始上传</button>
+    </div>
+</div>
+@}

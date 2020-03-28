@@ -1,0 +1,44 @@
+@layout("/common/_container.html",{bg:"bg-white",js:["/assets/modular/system/leave/leaveSelect.js"]}){
+<form class="layui-form model-form" id="leaveForm" lay-filter="leaveForm">
+    <input class="layui-input" id="leaveId" name="id" type="hidden"/>
+    <input class="layui-input" name="uid" type="hidden"/>
+    <input class="layui-input" name="status" type="hidden"/>
+    <input class="layui-input" name="taskId" type="hidden"/>
+    <div class="layui-form-item">
+        <label class="layui-form-label">请假原因</label>
+        <div class="layui-input-inline">
+            <input class="layui-input" name="title" readonly value="" type="text"/>
+        </div>
+        <label class="layui-form-label">请假天数</label>
+        <div class="layui-input-inline">
+            <input class="layui-input" name="dates" readonly value="" type="text"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">申请人</label>
+        <div class="layui-input-inline">
+            <input class="layui-input" name="proposer" readonly value="" type="text"/>
+        </div>
+        <label class="layui-form-label">附件信息</label>
+        <div class="layui-input-inline">
+            <button class="layui-btn" id="fileUploads" type="button"><i class="layui-icon"></i>查看附件</button>
+        </div>
+    </div>
+    <div class="layui-form-item " style="margin-top: 0;">
+        <label class="layui-form-label">开始时间</label>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="startDate" name="startDate" value="" readonly type="text"/>
+        </div>
+        <label class="layui-form-label">结束时间</label>
+        <div class="layui-input-inline">
+            <input class="layui-input" id="endDate" name="endDate" value="" readonly type="text"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">备注信息</label>
+        <div class="layui-input-block">
+            <textarea id="note" name="note" readonly style="display: none"></textarea>
+        </div>
+    </div>
+</form>
+@}

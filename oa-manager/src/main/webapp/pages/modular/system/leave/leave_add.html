@@ -1,0 +1,39 @@
+@layout("/common/_container.html",{bg:"bg-white",js:["/assets/modular/system/leave/leave_add.js"]}){
+<form id="leaveForm" lay-filter="leaveForm" class="layui-form model-form">
+    <input id="uid" name="uid" type="hidden" value="${u.id}"/>
+    <div class="layui-form-item">
+        <label class="layui-form-label">请假原因<span style="color: red;">*</span></label>
+        <div class="layui-input-block">
+            <input name="title" placeholder="请输入请假原因" type="text" class="layui-input" lay-verify="required" required/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">开始时间</label>
+        <div class="layui-input-block">
+            <input id="startDate" name="startDate" placeholder="请输入请假开始时间" type="text" class="layui-input" lay-verify="required" required autocomplete="off"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">结束时间</label>
+        <div class="layui-input-block">
+            <input id="endDate" name="endDate" placeholder="请输入请假结束时间" type="text" class="layui-input" lay-verify="required" required autocomplete="off"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">上传附件</label>
+        <div class="layui-input-block">
+            <button type="button" class="layui-btn" id="fileUploads"><i class="layui-icon"></i>上传附件</button>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">备注信息<span style="color: red;">*</span></label>
+        <div class="layui-input-block">
+            <textarea id="note" name="note" style="display: none;"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item text-right">
+        <button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">取消</button>
+        <button class="layui-btn" lay-filter="btnSubmit" lay-submit>确定</button>
+    </div>
+</form>
+@}

@@ -1,0 +1,39 @@
+@layout("/common/_container.html",{bg:"bg-white",js:["/assets/modular/system/upload/getFile.js"]}){
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <input class="layui-input" id="fileName" placeholder="文件名" type="text" />
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn icon-btn" id="btnSearch"><i class="layui-icon">&#xe615;</i>查询</button>
+                            <button type="button" class="layui-btn" id="fileUploads"><i class="layui-icon"></i>上传附件</button>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="getFileTable" lay-filter="getFileTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="tableBar" type="text/html">
+    <a class="layui-btn layui-btn-xs" lay-event="download">下载</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+<script type="text/html" id="fileDataTpi">
+    <div class="layer-photos-demo" style="cursor:pointer;">
+        <img layer-pid="{{d.leaveId}}" layer-src="${ctxPath}{{d.fileData}}" src="${ctxPath}{{d.fileData}}" alt="{{d.fileName}}"/>
+    </div>
+</script>
+
+<style>
+    .layui-table-cell{
+        height:auto !important;
+    }
+</style>
+@}

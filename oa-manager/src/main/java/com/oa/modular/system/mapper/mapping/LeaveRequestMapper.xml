@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oa.modular.system.mapper.LeaveRequestMapper">
+    <resultMap id="BaseResultMap" type="com.oa.modular.system.entity.LeaveRequest">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="startDate" property="startDate"/>
+        <result column="endDate" property="endDate"/>
+        <result column="uid" property="uid"/>
+        <result column="status" property="status"/>
+    </resultMap>
+
+    <!--按条件查询请假-->
+    <select id="selectLeaveByCon" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page" resultType="map">
+        SELECT * FROM sys_leave_request
+            <where>
+                <if test="status!=null and status !=''">
+                     status = #{status}
+                </if>
+                <if test="uid!=null and uid!=''">
+                    and uid = #{uid}
+                </if>
+                <if test="startDate!=null and startDate !=''">
+                    and startDate like CONCAT('%',#{startDate},'%')
+                </if>
+                <if test="endDate!=null and endDate !=''">
+                    and endDate like CONCAT('%',#{endDate},'%')
+                </if>
+            </where>
+    </select>
+
+    <update id="setStatus">
+		update sys_leave_request set status = #{status} where id=#{leaveId}
+	</update>
+</mapper>

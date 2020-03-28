@@ -1,0 +1,75 @@
+2019-12-08 16:19:34.744 ERROR 3924 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Constructor in com.oa.core.common.constant.factory.ConstantFactory required a bean of type 'com.oa.modular.system.mapper.RoleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oa.modular.system.mapper.RoleMapper' in your configuration.
+
+2019-12-08 16:20:19.882 ERROR 11692 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Constructor in com.oa.core.common.constant.factory.ConstantFactory required a bean of type 'com.oa.modular.system.mapper.RoleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oa.modular.system.mapper.RoleMapper' in your configuration.
+
+2019-12-08 16:21:11.575 ERROR 9580 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Constructor in com.oa.core.common.constant.factory.ConstantFactory required a bean of type 'com.oa.modular.system.mapper.RoleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oa.modular.system.mapper.RoleMapper' in your configuration.
+
+2019-12-08 16:21:39.842 ERROR 2624 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Constructor in com.oa.core.common.constant.factory.ConstantFactory required a bean of type 'com.oa.modular.system.mapper.RoleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oa.modular.system.mapper.RoleMapper' in your configuration.
+
+2019-12-08 16:24:17.851 ERROR 6624 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Constructor in com.oa.core.common.constant.factory.ConstantFactory required a bean of type 'com.oa.modular.system.mapper.RoleMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oa.modular.system.mapper.RoleMapper' in your configuration.
+

@@ -1,0 +1,43 @@
+@layout("/common/_container.html",{js:["/assets/modular/system/task/task.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">代办任务</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input class="layui-input" id="proposer" placeholder="申请人" type="text"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input class="layui-input" id="title" placeholder="标题" type="text"/>
+                            </div>
+
+                            <div class="layui-inline">
+                                <button class="layui-btn icon-btn" id="btnSearch"><i class="layui-icon">&#xe615;</i>查询
+                                </button>
+                                <!--<button class="layui-btn icon-btn" id="btnExp"><i class="layui-icon">&#xe67d;</i>导出
+                            </button>-->
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="taskTable" lay-filter="taskTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="toolbarDemo" type="text/html">
+
+</script>
+
+<script id="tableBar" type="text/html">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="process_trace">流程跟踪</a>
+    <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="execute_the_task">执行任务</a>
+</script>
+@}
