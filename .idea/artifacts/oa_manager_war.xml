@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="oa-manager:war">
+    <output-path>$PROJECT_DIR$/oa-manager/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>oa-manager</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="oa-manager.war">
+      <element id="artifact" artifact-name="oa-manager:war exploded" />
+    </root>
+  </artifact>
+</component>
